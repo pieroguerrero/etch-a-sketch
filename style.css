@@ -1,0 +1,23 @@
+.whiteboard{
+    border: 2px;
+    border-style: solid;
+    margin: 0px;
+    padding: 0px;
+}
+
+.row{
+    display: flex;
+    border-width: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.column{
+    border-width: 0px;
+    padding: 0px;
+    margin: 0px;
+    border-color: transparent;
+}
+
+
+
