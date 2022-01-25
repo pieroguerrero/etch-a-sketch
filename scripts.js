@@ -1,6 +1,6 @@
 //https://silinde87.github.io/top-etch-a-sketch/
 
-const objConfiguration = { witheBoardSideZise: 800, pixelsPerSide: 51, color: "black", currentCellX: 25, currentCellY: 25 };
+const objConfiguration = { witheBoardSideZise: 550, pixelsPerSide: 51, color: "black", currentCellX: 25, currentCellY: 25 };
 
 function paintCell(e) {
     e.target.style.backgroundColor = objConfiguration.color;
@@ -47,6 +47,20 @@ function drawGrid() {
 
             divNewColumn.addEventListener("mouseover", paintCell);
 
+            if (i === 0) {
+                if (j === 0) {
+                    divNewColumn.classList.add("corner-ul");
+                } else if (j === (nColumns - 1)) {
+                    divNewColumn.classList.add("corner-ur");
+                }
+            } else if (i === (nRows - 1)) {
+                if (j === 0) {
+                    divNewColumn.classList.add("corner-bl");
+                } else if (j === (nColumns - 1)) {
+                    divNewColumn.classList.add("corner-br");
+                }
+            }
+
             divNewRow.appendChild(divNewColumn);
         }
 
@@ -64,7 +78,11 @@ function removeGrid() {
 
     let divWhiteBoardNew = document.createElement("div");
     divWhiteBoardNew.classList.add("whiteboard");
-    divPlayArea.appendChild(divWhiteBoardNew);
+    //divPlayArea.appendChild(divWhiteBoardNew);
+
+    divPlayArea.insertBefore(divWhiteBoardNew, divPlayArea.children[1]);
+
+    divWhiteBoardNew.focus();
 }
 
 function prepareControls() {
@@ -90,7 +108,7 @@ function prepareControls() {
 
 function clearGrid() {
     const whiteBoard = document.querySelectorAll(".column");
-    whiteBoard.forEach(col => col.style.backgroundColor = "white");
+    whiteBoard.forEach(col => col.style.backgroundColor = "#cacaca");
 }
 
 function paintNewCell(x, y) {

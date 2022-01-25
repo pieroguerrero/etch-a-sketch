@@ -1,23 +1,172 @@
-.whiteboard{
-    border: 2px;
-    border-style: solid;
-    margin: 0px;
-    padding: 0px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
 
-.row{
+.row {
     display: flex;
     border-width: 0px;
     padding: 0px;
     margin: 0px;
 }
 
-.column{
+.column {
     border-width: 0px;
     padding: 0px;
     margin: 0px;
     border-color: transparent;
 }
 
+.play-area {
+    background-color: #E90418;
+    border-radius: 20px;
+    height: 790px;
+    width: 800px;
+    padding-bottom: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-weight: bold;
+}
+
+.play-area .shadow {
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.71);
+    -moz-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.71);
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.71);
+}
+
+.whiteboard {
+    background-color: #cacaca;
+    height: 550px;
+    width: 550px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: crosshair;
+    z-index: 1;
 
 
+
+}
+
+.whiteboard .shadow {
+    -webkit-box-shadow: inset 0px 0px 5px 3px rgba(0, 0, 0, 0.71);
+    -moz-box-shadow: inset 0px 0px 5px 3px rgba(0, 0, 0, 0.71);
+    box-shadow: inset 0px 0px 5px 3px rgba(0, 0, 0, 0.71);
+}
+
+.controls {
+    height: 100px;
+    width: 97%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.controls .ball {
+    transform: translate3d(0px, 0px, 0px) rotate(90deg);
+    margin: 10px 10px 10px 0;
+    background-color: #FFFFEA;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    box-shadow: 0px 0px 5px 3px rgb(0 0 0 / 71%);
+}
+
+.title {
+    color: #FFE4BA;
+    font-size: 70px;
+    font-weight: bolder;
+    margin: 10px;
+    display: block;
+    font-family: 'Annie Use Your Telescope', cursive;
+}
+
+.controls .center {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.div-slider {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: #FFE4BA;
+    font-weight: bolder;
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: 25px;
+}
+
+.center .button-clear {
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-weight: bolder;
+    font-size: 20px;
+
+    margin: 0;
+    cursor: pointer;
+    user-select: none;
+
+    background-color: #FFFFEA;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.71);
+    -moz-box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.71);
+    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.71);
+
+}
+
+.center .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    background: #cacaca;
+    outline: none;
+    opacity: 1;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+
+    align-self: center;
+}
+
+.center .slider:hover {
+    opacity: 1;
+}
+
+.center .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #FFFFEA;
+    cursor: pointer;
+}
+
+.center .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #FFFFEA;
+    cursor: pointer;
+}
+
+.whiteboard .corner-ul{
+    border-top-left-radius: 10px;
+}
+
+.whiteboard .corner-ur{
+    border-top-right-radius: 10px;
+}
+
+.whiteboard .corner-bl{
+    border-bottom-left-radius: 10px;
+}
+
+.whiteboard .corner-br{
+    border-bottom-right-radius: 10px;
+}

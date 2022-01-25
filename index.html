@@ -7,26 +7,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ETCH-A-SKETCH</title>
 
+    <script src="https://kit.fontawesome.com/86acbfc7fb.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 
     <script type="text/javascript" src="scripts.js" defer></script>
 </head>
 
 <body>
-    <div class="play-area">
+    <div class="play-area shadow">
+        <div class="title">
+            <span>etch-a-sketch</span>
+        </div>
+        <div class="whiteboard">
+        </div>
         <div class="controls">
-            <button class="button-clear">Clear</button>
-            <div class="div-slider">
-                <input class="slider" type="range" min="1" max="100" value="50">
-                <p class="pixels"></p>
+            <div class="left ball">
+                <div class="up-arrrow"></div>
+                <div class="down-arrow"></div>
+            </div>
+            <div class="center">
+                <div class="div-slider">
+                    <p class="title-slider">Resolution: </p>
+                    <input class="slider" type="range" min="1" max="100" value="50">
+                    <p class="pixels">51x51</p>
+                </div>
+                <button class="button-clear">Clear all</button>
+
+            </div>
+            <div class="right ball">
+                <div class="left-arrrow"></div>
+                <div class="right-arrow"></div>
             </div>
 
 
         </div>
-        <div class="whiteboard">
-        </div>
     </div>
-
+    <div class="footer">
+        <span>Created by <strong>pieroguerrero</strong></span>
+        <a href="https://github.com/pieroguerrero">
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+        </a>
+    </div>
 
 </body>
 
