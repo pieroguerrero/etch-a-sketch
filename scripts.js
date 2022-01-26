@@ -78,6 +78,7 @@ function removeGrid() {
 
     let divWhiteBoardNew = document.createElement("div");
     divWhiteBoardNew.classList.add("whiteboard");
+    divWhiteBoardNew.classList.add("shadow");
     //divPlayArea.appendChild(divWhiteBoardNew);
 
     divPlayArea.insertBefore(divWhiteBoardNew, divPlayArea.children[1]);
@@ -88,17 +89,21 @@ function removeGrid() {
 function prepareControls() {
 
     const slider = document.querySelector(".slider");
-    slider.addEventListener("input", () => {
-        let pSliderText = document.querySelector(".pixels");
-        pSliderText.textContent = slider.value.toString() + "x" + slider.value.toString();
 
+    slider.addEventListener("change", () => {
         removeGrid();
 
         objConfiguration.pixelsPerSide = Number(slider.value);
         drawGrid();
 
         let divWhiteBoard = document.querySelector(".play-area .whiteboard");
+        divWhiteBoard.focus();
 
+    });
+
+    slider.addEventListener("input", () => {
+        let pSliderText = document.querySelector(".pixels");
+        pSliderText.textContent = slider.value.toString() + "x" + slider.value.toString();
     });
 
     const btnClear = document.querySelector(".button-clear");
@@ -107,8 +112,8 @@ function prepareControls() {
 }
 
 function clearGrid() {
-    const whiteBoard = document.querySelectorAll(".column");
-    whiteBoard.forEach(col => col.style.backgroundColor = "#cacaca");
+    const whiteBoardColumns = document.querySelectorAll(".column");
+    whiteBoardColumns.forEach(col => col.style.backgroundColor = "#cacaca");
 }
 
 function paintNewCell(x, y) {

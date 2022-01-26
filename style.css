@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
 
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: #7c7c7c;
+}
+
 .row {
     display: flex;
     border-width: 0px;
@@ -15,7 +24,7 @@
 }
 
 .play-area {
-    background-color: #E90418;
+    background-color: #d30012;
     border-radius: 20px;
     height: 790px;
     width: 800px;
@@ -29,12 +38,6 @@
     font-weight: bold;
 }
 
-.play-area .shadow {
-    -webkit-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.71);
-    -moz-box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.71);
-    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.71);
-}
-
 .whiteboard {
     background-color: #cacaca;
     height: 550px;
@@ -44,12 +47,9 @@
     flex-wrap: wrap;
     cursor: crosshair;
     z-index: 1;
-
-
-
 }
 
-.whiteboard .shadow {
+.shadow {
     -webkit-box-shadow: inset 0px 0px 5px 3px rgba(0, 0, 0, 0.71);
     -moz-box-shadow: inset 0px 0px 5px 3px rgba(0, 0, 0, 0.71);
     box-shadow: inset 0px 0px 5px 3px rgba(0, 0, 0, 0.71);
@@ -65,13 +65,29 @@
 }
 
 .controls .ball {
-    transform: translate3d(0px, 0px, 0px) rotate(90deg);
+    /* transform: translate3d(0px, 0px, 0px) rotate(90deg); */
     margin: 10px 10px 10px 0;
     background-color: #FFFFEA;
     border-radius: 50%;
     height: 100px;
     width: 100px;
     box-shadow: 0px 0px 5px 3px rgb(0 0 0 / 71%);
+
+
+}
+
+.controls .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.controls .right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 55px;
 }
 
 .title {
@@ -155,18 +171,51 @@
     cursor: pointer;
 }
 
-.whiteboard .corner-ul{
+.whiteboard .corner-ul {
     border-top-left-radius: 10px;
 }
 
-.whiteboard .corner-ur{
+.whiteboard .corner-ur {
     border-top-right-radius: 10px;
 }
 
-.whiteboard .corner-bl{
+.whiteboard .corner-bl {
     border-bottom-left-radius: 10px;
 }
 
-.whiteboard .corner-br{
+.whiteboard .corner-br {
     border-bottom-right-radius: 10px;
+}
+
+.footer {
+    font-size: 20px;
+}
+
+.fab {
+    color: black;
+}
+
+/* .updown{
+    margin: 0px;
+    padding: 0px;
+    font-weight: bolder;
+    font-size: 1em;
+    text-align: center;
+} */
+
+.content-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fas {
+    flex: 0 0 auto;
+}
+
+.directions{
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 0px;
 }
