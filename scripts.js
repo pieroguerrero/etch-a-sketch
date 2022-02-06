@@ -1,6 +1,6 @@
 //https://silinde87.github.io/top-etch-a-sketch/
 
-const objConfiguration = { witheBoardSideZise: 550, pixelsPerSide: 51, color: "black", currentCellX: 25, currentCellY: 25 };
+const objConfiguration = { witheBoardSideZise: 550, pixelsPerSide: 51, color: "black", currentCellX: 25, currentCellY: 25, };
 
 function paintCell(e) {
     e.target.style.backgroundColor = objConfiguration.color;
